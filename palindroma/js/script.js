@@ -2,7 +2,7 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // Parola che inserisce l'utente
-const userWord = prompt('Dimmi una parola');
+const userWord = prompt('Dimmi una parola').toLowerCase();
 
 const palindromaWord = isPalindromaOrNot(userWord);
 
