@@ -1,27 +1,25 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
+// Parola che inserisce l'utente
+const userWord = prompt('Dimmi una parola');
 
- 
-isPalindromaOrNot('otto');
+const palindromaWord = isPalindromaOrNot(userWord);
 
-// Creazione parola che comprende se la parola inserita è palindroma
+if (userWord === palindromaWord) {
+    alert('Questa è una parola palindroma');
+} else {
+    alert('Questa non è una parola palindroma');}
+// Creazione funzione che comprende se la parola inserita è palindroma
 // parola -> parola da verificare
-// return: booleano, true se la parola è palindroma altrimenti false 
+// return: parola palindroma
 function isPalindromaOrNot(word) {
-    let palindromaWord = false;
+    let reverseWord = '';
     // Scorriamo le lettere della parola
     for (let i = word.length -1; i >= 0; i--) {
-        console.log(word[i]);
-        console.log(i);
-        const reverseName = word.length -1 - i;
-        console.log(reverseName);
-
-        if (word === reverseName) {
-            palindromaWord = true;
-        }
-
-        return palindromaWord;
+        // Aggiungo a ogni ciclo le singole parole invertite
+        reverseWord += word[i];
     }
+    return reverseWord;
 }
 
